@@ -1,0 +1,28 @@
+function sum(set1, set2) {
+    let distinctElements = [];
+
+    
+    for (let element of set1) {
+        if (!distinctElements.includes(element)) {
+            distinctElements.push(element);
+        }
+    }
+
+   
+    for (let element of set2) {
+        if (!distinctElements.includes(element)) {
+            distinctElements.push(element);
+        }
+    }
+
+   
+    let sumResult = distinctElements.reduce((sum, element) => sum + element, 0);
+
+    return sumResult;
+}
+
+// Example of problem1 
+let set1 = [3, 1, 7, 9];
+let set2 = [2, 4, 1, 9, 3];
+let result = sum(set1, set2);
+

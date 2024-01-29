@@ -1,0 +1,23 @@
+function dotProduct(v1, v2) {
+
+    let n = v1.length;
+    let ps = 0;
+
+    for (let i = 0; i < n; i++) {
+        ps += v1[i] * v2[i];
+    }
+
+    return ps;
+}
+
+function ortho(v1, v2) {
+    let ps = dotProduct(v1, v2);
+
+    return ps === 0;
+}
+
+// Example problem2:
+let vector1 = [1, 2, 3];
+let vector2 = [4, -2, 1];
+let result = ortho(vector1, vector2);
+
